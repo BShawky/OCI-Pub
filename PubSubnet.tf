@@ -4,6 +4,6 @@ resource "oci_core_subnet" "pub_subnet" {
     cidr_block                  = "10.0.0.0/24"
     compartment_id              = var.compartment_id
     prohibit_public_ip_on_vnic  = false
-    display_name                = "publicSubnet"
+    display_name                = "Public Subnet"
     dns_label                   = "publicsubnet"
 }
