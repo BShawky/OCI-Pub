@@ -13,7 +13,7 @@ provider "oci" {
 }
 
 # This block to - Deploy VCN
-resource "oci_core_vcn" "vcntr" {
+resource "oci_core_vcn" "vcn_tr" {
   dns_label             = "vcn_dns"
   cidr_block            = "10.0.0.0/16"
   compartment_id        = var.compartment_id
@@ -22,7 +22,7 @@ resource "oci_core_vcn" "vcntr" {
 
 # This block to - Deploy Public Subnet in upper VCN
 resource "oci_core_subnet" "public_subnet" {
-    vcn_id                      =  oci_core_vcn.vcntr.id
+    vcn_id                      =  oci_core_vcn.vcn_tr.id
     cidr_block                  = "10.0.0.0/24"
     compartment_id              = var.compartment_id
     display_name                = "public_subnet"
@@ -32,7 +32,7 @@ resource "oci_core_subnet" "public_subnet" {
 
 # This block to - Deploy Private Subnet in upper VCN
 resource "oci_core_subnet" "private_subnet" {
-    vcn_id                      =  oci_core_vcn.vcntr.id
+    vcn_id                      =  oci_core_vcn.vcn_tr.id
     cidr_block                  = "10.0.1.0/24"
     compartment_id              = var.compartment_id
     display_name                = "private_subnet"
