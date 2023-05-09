@@ -1,4 +1,3 @@
-
 # This block to - Deploy Private Subnet in upper VCN
 resource "oci_core_subnet" "private_subnet" {
     vcn_id                      =  oci_core_vcn.tf_vcn.id
