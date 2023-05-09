@@ -1,7 +1,7 @@
-
+# Defines the Route Table
 resource "oci_core_default_route_table" "default_route_table" {
-  manage_default_resource_id = oci_core_vcn.test_vcn.default_route_table_id
-  display_name               = "DefaultRouteTable"
+  manage_default_resource_id = oci_core_vcn.tf_vcn.default_route_table_id
+  display_name               = "Default Route Table"
 
   route_rules {
     destination       = "0.0.0.0/0"
