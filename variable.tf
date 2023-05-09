@@ -11,4 +11,5 @@ variable "region" {
 variable "compartment_id" {
     description  = "My Testing Compartment "
     type         = string
+    default      = "ocid1.compartment.oc1..aaaaaaaawk4alwcvrpfraofm6ifwjj3okqgkqcld6g3k33ssgxn5zlgdqohq"
 }
