@@ -6,6 +6,6 @@ resource "oci_core_default_route_table" "default_route_table" {
   route_rules {
     destination       = "0.0.0.0/0"
     destination_type  = "CIDR_BLOCK"
-    network_entity_id = oci_core_internet_gateway.test_internet_gateway.id
+    network_entity_id = oci_core_internet_gateway.IG.id
   }
 }
