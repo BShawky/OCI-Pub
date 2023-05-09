@@ -25,7 +25,6 @@ resource "oci_core_subnet" "public_subnet" {
     compartment_id              = var.compartment_id
     display_name                = "public_subnet"
     prohibit_public_ip_on_vnic  = false
-    dns_label                   = "pub_sub"
 }
 
 # This block to - Deploy Private Subnet in upper VCN
@@ -35,5 +34,4 @@ resource "oci_core_subnet" "private_subnet" {
     compartment_id              = var.compartment_id
     display_name                = "private_subnet"
     prohibit_public_ip_on_vnic  = true
-    dns_label                   = "prv_sub"
 }
